@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    background: rgb(140,0,217);
+    background: linear-gradient(90deg, rgba(140,0,217,1) 61%, rgba(241,0,255,1) 100%);
+}
+
+.container{
+    width: 80vw;
+    height: 80vh;
+    background-color: dodgerblue;
+    border-radius: 20px;
+}
+
+.calendarHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.calendarHeader h1{
+    color: white;
+}
+
+.calendarNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.month{
+    text-align: center;
+    width: 180px;
+    font-size: 24px;
+    margin: 20px;
+    color: white;
+}
+
+.weekdays{
+    display: grid;
+    grid-template-columns: repeat(7 ,65px);
+    grid-template-rows: repeat(1 ,65px);
+    justify-content: center;
+    column-gap: 70px;
+    row-gap: 15px;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.calendarDate{
+    display: grid;
+    grid-template-columns: repeat(7 ,65px);
+    grid-template-rows: repeat(7 ,65px);
+    justify-content: center;
+    column-gap: 70px;
+    font-size: 22px;
+    row-gap: 15px;
+}
+
+.sunday , .monday , .tuesday , .wednesday , .thursday , .friday , .saturday{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.leftarr , .rightarr{
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        height: 90vh;
+    }
+    
+    .calendarNav{
+        gap: 20px;
+    }
+
+    .weekdays{
+        margin-top: 50px;
+        grid-template-columns: repeat(7 ,20px);
+        grid-template-rows: repeat(1 ,20px);
+        font-size: 14px;
+        column-gap: 20px;
+    }
+
+    .calendarDate{
+        margin-top: 30px;
+        grid-template-columns: repeat(7 ,20px);
+        grid-template-rows: repeat(1 ,20px);
+        font-size: 14px;
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .leftarr , .rightarr{
+        font-size: 22px;
+    }
+    .month{
+        width: 147px;
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1110px){
+    .calendarNav{
+        gap: 40px;
+    }
+
+    .weekdays{
+        margin-top: 50px;
+        grid-template-columns: repeat(7 ,48px);
+        grid-template-rows: repeat(1 ,48px);
+        font-size: 22px;
+        column-gap: 35px;
+    }
+
+    .calendarDate{
+        margin-top: 30px;
+        grid-template-columns: repeat(7 ,48px);
+        grid-template-rows: repeat(1 ,48px);
+        font-size: 22px;
+        column-gap: 35px;
+        row-gap: 40px;
+    }   
+}
